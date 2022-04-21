@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="header">navbar</div>
+    <div id="main">main</div>
+    <div id="footer">footer</div>
+    <header>
+
+
+    </header>
+
+    <main>
+
+ <script>
+
+
+function Employee (EmployeeID ,FullName ,Department,Level , imgurl , salary ){
+
+this.EmployeeID =EmployeeID ;
+this.FullName =FullName ;
+this.Department = Department ;
+this.Level = Level ; 
+this.imgurl =imgurl;
+ 
+}
+
+
+Employee.prototype.salary= function (){
+ 
+   if (this.Level = "senior") {
+
+     this.salary = getRndIntger() ;
+
+ function getRndIntger(min, max) {
+  return Math.floor(Math.random() * 500) + 1500;
+   
+            }
+    console.table(this.FullName + "  salary  = " + getRndIntger());
+
+       } 
+         else if (this.Level = "mid-senior"){
+    this.salary = getRndIntger() ;
+    function getRndIntger(min , max) {
+    return Math.floor(Math.random() * 500) + 1000 ;
+    
+           }
+         console.table(this.FullName + "  salary  = " + getRndIntger());
+     }
+      else  
+     
+    this.salary = getRndIntger() ;
+    function getRndIntger(min , max) {
+  return  Math.floor(Math.random() * 500) + 500 ;
+  console.table(this.FullName + "  salary  = " + getRndIntger());
+    }
+    
+}
+
+
+
+ 
+ 
+ let ghazi = new Employee (1000 ,	"Ghazi Samer" ,	 "Administration",	"Senior" ,   "imgurl"  );
+ console.table(ghazi) ;
+ 
+ let lana = new Employee  (1001,	   "Lana ali" ,     	"Finance",	"Senior" ,   "imgurl"  );
+ console.table(lana) ; 
+
+ let tamara = new Employee (1002 ,	"Tamara Ayoub" ,	 "Marketing", 	"Senior" ,     "imgurl"  );
+ console.table(tamara) ; 
+
+ let safi = new Employee (1003 ,	"Safi Walid" ,	"Administration",	"mid-senior" , "imgurl"   );
+ console.table(safi) ; 
+
+ let omar = new Employee (1004 ,	"Omar Zaid" ,  	"Development",  	"Senior" , "imgurl"   );
+ console.table(omar) ; 
+
+ let rana = new Employee (1005 ,	"Rana Saleh" ,	    "Development",	   "jonior" , "imgurl"  );
+ console.table(rana) ; 
+
+ let hadi = new Employee (1006 ,	"Hadi Ahmad" ,	      "Finance",	"mid-senior" , "imgurl"  );
+ console.table(hadi) ; 
+
+
+ghazi.salary();
+lana.salary();
+tamara.salary();
+safi.salary();
+omar.salary();
+rana.salary();
+hadi.salary();
+
+
+
+let salary ;
+let netSalary = salary-salary*0.075 ;
+    
+// let salary = getRndInteger() ; 
+//  function getRndInteger(min, max) {
+//   return Math.floor(Math.random() * 500) + 1000;
+   
+// }
+// console.log(salary);
+
+ </script>
+
+
+
+
+
+
+
+
+
+    </main>
+
+    <footer>
+
+
+    </footer>
+</body>
+</html>
