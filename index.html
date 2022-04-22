@@ -7,107 +7,92 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="header">navbar</div>
-    <div id="main">main</div>
-    <div id="footer">footer</div>
-    <header>
+    <div id="header">  </div>
+    <div id="main"></div>
+    <div id="footer"></div>
+    <section>
+<header>
+    <nav>
+
+<a href="./accounting.html">accounting page</a>
+
+    </nav>
+    
 
 
     </header>
-
+</section>
+<section>
     <main>
-
+      
  <script>
-
-
-function Employee (EmployeeID ,FullName ,Department,Level , imgurl , salary ){
+function Employee (EmployeeID ,FullName ,Department,Level , imgurl   ){
 
 this.EmployeeID =EmployeeID ;
 this.FullName =FullName ;
 this.Department = Department ;
 this.Level = Level ; 
 this.imgurl =imgurl;
- 
+ this.salary = 0 ;
+}
+
+function getRndIntger(min, max) {
+  return Math.floor(Math.random() *(max - min +1 )) + min;
 }
 
 
-Employee.prototype.salary= function (){
+Employee.prototype.netsalary= function (){
  
-   if (this.Level = "senior") {
-
-     this.salary = getRndIntger() ;
-
- function getRndIntger(min, max) {
-  return Math.floor(Math.random() * 500) + 1500;
-   
-            }
-    console.table(this.FullName + "  salary  = " + getRndIntger());
-
-       } 
-         else if (this.Level = "mid-senior"){
-    this.salary = getRndIntger() ;
-    function getRndIntger(min , max) {
-    return Math.floor(Math.random() * 500) + 1000 ;
-    
-           }
-         console.table(this.FullName + "  salary  = " + getRndIntger());
+   if (this.Level === "senior") {
+     this.salary = getRndIntger(1500 , 2000) ;
+     this.salary = this.salary * (0.925 ) ;
+     document.write (`<h2> employee name is ${this.FullName} and has a net salary = ${this.salary} </h2>`);
      }
-      else  
-     
-    this.salary = getRndIntger() ;
-    function getRndIntger(min , max) {
-  return  Math.floor(Math.random() * 500) + 500 ;
-  console.table(this.FullName + "  salary  = " + getRndIntger());
-    }
     
-}
 
-
-
- 
- 
- let ghazi = new Employee (1000 ,	"Ghazi Samer" ,	 "Administration",	"Senior" ,   "imgurl"  );
+      if (this.Level === "mid-senior"){
+    this.salary = getRndIntger(1000 , 1500) ;
+    this.salary = this.salary *(0.925) ;
+    document.write (`<h2> employee name is ${this.FullName} and has a net salary = ${this.salary} </h2>`);
+     }
+     if (this.Level === "jonior"){
+    this.salary = getRndIntger(500 , 1000) ;
+    this.salary = this.salary *(0.925) ; 
+    document.write (`<h2> employee name is ${this.FullName} and has a net salary = ${this.salary} </h2>`);
+    }
+  }
+ let ghazi = new Employee (1000 ,	"Ghazi Samer" ,	 "Administration",	"senior" ,   "imgurl"   );
  console.table(ghazi) ;
  
- let lana = new Employee  (1001,	   "Lana ali" ,     	"Finance",	"Senior" ,   "imgurl"  );
+ let lana = new Employee  (1001,	   "Lana ali" ,     	"Finance",	"senior" ,   "imgurl"   );
  console.table(lana) ; 
-
- let tamara = new Employee (1002 ,	"Tamara Ayoub" ,	 "Marketing", 	"Senior" ,     "imgurl"  );
+ 
+ let tamara = new Employee (1002 ,	"Tamara Ayoub" ,	 "Marketing", 	"senior" ,     "imgurl"  );
  console.table(tamara) ; 
 
  let safi = new Employee (1003 ,	"Safi Walid" ,	"Administration",	"mid-senior" , "imgurl"   );
- console.table(safi) ; 
+ console.table(safi) ;
 
- let omar = new Employee (1004 ,	"Omar Zaid" ,  	"Development",  	"Senior" , "imgurl"   );
+ let omar = new Employee (1004 ,	"Omar Zaid" ,  	"Development",  	"senior" , "imgurl"   );
  console.table(omar) ; 
 
  let rana = new Employee (1005 ,	"Rana Saleh" ,	    "Development",	   "jonior" , "imgurl"  );
- console.table(rana) ; 
+ console.table(rana) ;
 
- let hadi = new Employee (1006 ,	"Hadi Ahmad" ,	      "Finance",	"mid-senior" , "imgurl"  );
+ let hadi = new Employee (1006 ,	"Hadi Ahmad" ,	      "Finance",	"mid-senior" , "imgurl" );
  console.table(hadi) ; 
 
 
-ghazi.salary();
-lana.salary();
-tamara.salary();
-safi.salary();
-omar.salary();
-rana.salary();
-hadi.salary();
 
 
-
-let salary ;
-let netSalary = salary-salary*0.075 ;
-    
-// let salary = getRndInteger() ; 
-//  function getRndInteger(min, max) {
-//   return Math.floor(Math.random() * 500) + 1000;
-   
-// }
-// console.log(salary);
-
+ghazi.netsalary();
+lana.netsalary();
+tamara.netsalary();
+safi.netsalary();
+omar.netsalary();
+rana.netsalary();
+hadi.netsalary();
+ 
  </script>
 
 
@@ -119,10 +104,13 @@ let netSalary = salary-salary*0.075 ;
 
 
     </main>
-
+</section>
+<section>
     <footer>
+      mohammad alshraideh : all rights reserved &copy; 
 
 
     </footer>
+  </section>
 </body>
 </html>
