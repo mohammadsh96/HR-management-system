@@ -12,9 +12,9 @@
     <div id="footer"></div>
     <section>
 <header>
-    <nav>
+    <nav style="border:2px solid #000;">
 
-<a href="./accounting.html">accounting page</a>
+<a href="./accounting.html" style="border: 1px solid #000; font-weight: 400 ; background-color: rgb(226, 151, 151);">next page </a>
 
     </nav>
     
@@ -34,6 +34,7 @@ this.Department = Department ;
 this.Level = Level ; 
 this.imgurl =imgurl;
  this.salary = 0 ;
+ this.randomNumber =0;
 }
 
 function getRndIntger(min, max) {
@@ -46,19 +47,19 @@ Employee.prototype.netsalary= function (){
    if (this.Level === "senior") {
      this.salary = getRndIntger(1500 , 2000) ;
      this.salary = this.salary * (0.925 ) ;
-     document.write (`<h2> employee name is ${this.FullName} and has a net salary = ${this.salary} </h2>`);
+     document.write (`<p> employee name : ${this.FullName} & net salary = ${this.salary} </p>`);
      }
     
 
       if (this.Level === "mid-senior"){
     this.salary = getRndIntger(1000 , 1500) ;
     this.salary = this.salary *(0.925) ;
-    document.write (`<h2> employee name is ${this.FullName} and has a net salary = ${this.salary} </h2>`);
+    document.write (`<p> employee name  ${this.FullName} & net salary = ${this.salary} </p>`);
      }
      if (this.Level === "jonior"){
     this.salary = getRndIntger(500 , 1000) ;
     this.salary = this.salary *(0.925) ; 
-    document.write (`<h2> employee name is ${this.FullName} and has a net salary = ${this.salary} </h2>`);
+    document.write (`<p> employee name  ${this.FullName} & net salary = ${this.salary} </p>`);
     }
   }
  let ghazi = new Employee (1000 ,	"Ghazi Samer" ,	 "Administration",	"senior" ,   "imgurl"   );
@@ -93,13 +94,91 @@ omar.netsalary();
 rana.netsalary();
 hadi.netsalary();
  
+
+
+Employee.prototype.render=function(){
+  
+
+    
+    
+  
+  const val = Math.floor(1000 + Math.random() * 9000);this.randomNumber=val;
+
+return val ;
+document.write(`<h3> this random number is for   ${this.FullName}  + and its =  ${val} </h3>`);
+
+  let Ename = document.createElement("h3") ;
+  Ename.textContent =this.FullName ;
+  secEL.appendChild(Ename);
+
+  let EID = document.createElement("h3") ;
+  EID.textContent =this.EmployeeID ;
+  secEL.appendChild(EID);
+
+  let Elevel = document.createElement("h3") ;
+  Elevel.textContent =this.Level ;
+  secEL.appendChild(Elevel);
+
+}
+ghazi.render();
+lana.render();
+tamara.render();
+safi.render();
+omar.render();
+rana.render();
+hadi.render();
+
  </script>
 
 
+<section>
+  <form id="formID" style="border: 2px solid #000 " >
+
+<label for="fname" style="color: rgb(64, 136, 15); font-size: large; font-style: initials; "  >full name </label>
+<input type="text" id="fname" name="full name">
+<br><br>
+<label for="Department" style="color: rgb(64, 136, 15); font-size: large; font-style: initials; ">Choose a Department:</label>
+<select name="Department" id="Department">
+  <option value="Administration" style="color: darkmagenta; " >Administration</option>
+  <option value="Marketing">Marketing</option>
+  <option value="Development">Development</option>
+  <option value="Finance">Finance</option>
+</select>
+<br><br>
+
+
+<label for="level" style="color: rgb(64, 136, 15); font-size: large; font-style: initials; " > level:</label>
+<select name="level" id="level">
+  <option value="juior" style="color: blue;" >juior</option>
+  <option value="mid-senior" style="color: blue;">mid-senior</option>
+  <option value="senior" style="color: blue;">senior</option>
+</select>
+ <br><br>
+  <label for="img"style="color: rgb(64, 136, 15); font-size: large; font-style: initials; " >image url </label>
+  <input type="text" id="img"  name = "img">
+  
+   <br> <br> <br>
+<input type="submit" value="Submit" style="color: crimson;">
+
+
+  </form>
+
+</section>
+
+
+<section id="secEL">
+<script>
+
+
+
+  
 
 
 
 
+</script>
+
+</section>
 
 
 
@@ -112,5 +191,6 @@ hadi.netsalary();
 
     </footer>
   </section>
+  <script src="./app.js"></script>
 </body>
 </html>

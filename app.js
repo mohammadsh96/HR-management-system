@@ -1,4 +1,6 @@
 `use strict`;
+let secEL = document.getElementById("secEl");
+
 
 function Employee (EmployeeID ,FullName ,Department,Level , imgurl , salary ){
 
@@ -55,12 +57,22 @@ function Employee (EmployeeID ,FullName ,Department,Level , imgurl , salary ){
      let hadi = new Employee (1006 ,	"Hadi Ahmad" ,	      "Finance",	"mid-senior" , "imgurl"  );
      console.table(hadi) ; 
     
-    
-    ghazi.salary();
-    lana.salary();
-    tamara.salary();
-    safi.salary();
-    omar.salary();
-    rana.salary();
-    hadi.salary();
+
+  
     }
+
+    
+
+//     const val = Math.floor(1000 + Math.random() * 9000);
+// console.log(val);
+// let eventEl = document.getElementById ("formID");
+//  eventEl.addEventListener("submit" , handelsubmit ) ;
+//  function handelsubmit(event){
+// event.preventDefault();
+
+// console.log(event);
+// console.log(event.target.fname.value)
+// console.log(event.target.Department.value)
+// console.log(event.target.level.value)
+// console.log(event.target.img.value)
+//  }
