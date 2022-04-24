@@ -3,7 +3,7 @@ let secEl = document.getElementById("secEl");
 let fname = document.getElementById("fname");
 let eventEl = document.getElementById ("formID");
 let image =document.getElementById("img");
-let allEmployee =[];
+
 
  eventEl.addEventListener("submit" , handelsubmit ) ;
  function handelsubmit(event){
