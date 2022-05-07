@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>index page</title>
 </head>
 <body>
     <div id="header">  </div>
@@ -22,9 +22,11 @@
 
     </header>
 </section>
-<section>
+<section id="cardSection">
+  <div class="cadDiv" id="cadDiv"></div>
+</section>
     <main>
-      
+     <section style="width: 350px; border: #000 solid 1px;"> 
  <script >
    
    function Employee (EmployeeID ,FullName ,Department,Level , imgurl   ){
@@ -44,98 +46,68 @@ function getRndIntger(min, max) {
 }
 
 
-Employee.prototype.netsalary= function (){
+// Employee.prototype.netsalary= function (){
  
-   if (this.Level === "senior") {
-     this.salary = getRndIntger(1500 , 2000) ;
-     this.salary = this.salary * (0.925 ) ;
-     document.write ( `<p> employee name : ${this.FullName} & net salary = ${this.salary} </p>`);
+//    if (this.Level === "senior") {
+//      this.salary = getRndIntger(1500 , 2000) ;
+//      this.salary = this.salary * (0.925 ) ;
+//      document.write ( `<p> employee name : ${this.FullName} & net salary = ${this.salary} </p>`);
      
-     }
+//      }
     
 
-      if (this.Level === "mid-senior"){
-    this.salary = getRndIntger(1000 , 1500) ;
-    this.salary = this.salary *(0.925) ;
-    document.write (`<p> employee name  ${this.FullName} & net salary = ${this.salary} </p>`);
-     }
-     if (this.Level === "jonior"){
-    this.salary = getRndIntger(500 , 1000) ;
-    this.salary = this.salary *(0.925) ; 
-    document.write (`<p> employee name  ${this.FullName} & net salary = ${this.salary} </p>`);
-    }
-  }
- let ghazi = new Employee (1000 ,	"Ghazi Samer" ,	 "Administration",	"senior" ,   "imgurl"   );
- console.table(ghazi) ;
+//       if (this.Level === "mid-senior"){
+//     this.salary = getRndIntger(1000 , 1500) ;
+//     this.salary = this.salary *(0.925) ;
+//     document.write (`<p> employee name  ${this.FullName} & net salary = ${this.salary} </p>`);
+//      }
+//      if (this.Level === "jonior"){
+//     this.salary = getRndIntger(500 , 1000) ;
+//     this.salary = this.salary *(0.925) ; 
+//     document.write (`<p> employee name  ${this.FullName} & net salary = ${this.salary} </p>`);
+//     }
+//   }
+//  let ghazi = new Employee (1000 ,	"Ghazi Samer" ,	 "Administration",	"senior" ,   "imgurl"   );
+//  console.table(ghazi) ;
  
- let lana = new Employee  (1001,	   "Lana ali" ,     	"Finance",	"senior" ,   "imgurl"   );
- console.table(lana) ; 
+//  let lana = new Employee  (1001,	   "Lana ali" ,     	"Finance",	"senior" ,   "imgurl"   );
+//  console.table(lana) ; 
  
- let tamara = new Employee (1002 ,	"Tamara Ayoub" ,	 "Marketing", 	"senior" ,     "imgurl"  );
- console.table(tamara) ; 
+//  let tamara = new Employee (1002 ,	"Tamara Ayoub" ,	 "Marketing", 	"senior" ,     "imgurl"  );
+//  console.table(tamara) ; 
 
- let safi = new Employee (1003 ,	"Safi Walid" ,	"Administration",	"mid-senior" , "imgurl"   );
- console.table(safi) ;
+//  let safi = new Employee (1003 ,	"Safi Walid" ,	"Administration",	"mid-senior" , "imgurl"   );
+//  console.table(safi) ;
 
- let omar = new Employee (1004 ,	"Omar Zaid" ,  	"Development",  	"senior" , "imgurl"   );
- console.table(omar) ; 
+//  let omar = new Employee (1004 ,	"Omar Zaid" ,  	"Development",  	"senior" , "imgurl"   );
+//  console.table(omar) ; 
 
- let rana = new Employee (1005 ,	"Rana Saleh" ,	    "Development",	   "jonior" , "imgurl"  );
- console.table(rana) ;
+//  let rana = new Employee (1005 ,	"Rana Saleh" ,	    "Development",	   "jonior" , "imgurl"  );
+//  console.table(rana) ;
 
- let hadi = new Employee (1006 ,	"Hadi Ahmad" ,	      "Finance",	"mid-senior" , "imgurl" );
- console.table(hadi) ; 
-
-
+//  let hadi = new Employee (1006 ,	"Hadi Ahmad" ,	      "Finance",	"mid-senior" , "imgurl" );
+//  console.table(hadi) ; 
 
 
-ghazi.netsalary();
-lana.netsalary();
-tamara.netsalary();
-safi.netsalary();
-omar.netsalary();
-rana.netsalary();
-hadi.netsalary();
+
+
+// ghazi.netsalary();
+// lana.netsalary();
+// tamara.netsalary();
+// safi.netsalary();
+// omar.netsalary();
+// rana.netsalary();
+// hadi.netsalary();
  
 
 
-Employee.prototype.render=function(){
-  
-  const val = Math.floor(1000 + Math.random() * 9000);this.randomNumber=val;
-let x = ("this random number is for"  + this.FullName  +" and its " +  val );
-return x ;
-
-  let fname = document.createElement("h3") ;
-  fname.textContent =this.FullName ;
-  secEl.appendChild(fname);
-
-  let EID = document.createElement("h3") ;
-  EID.textContent =this.EmployeeID ;
-  secEl.appendChild(EID);
-
-  let Elevel = document.createElement("h3") ;
-  Elevel.textContent =this.Level ;
-  secEl.appendChild(Elevel);
-
-  let image = document.createElement("img")
-}
-
-ghazi.render();
-lana.render();
-tamara.render();
-safi.render();
-omar.render();
-rana.render();
-hadi.render();
 
 
 
  </script>
-
-
-<section id="secEl" style="border: 1px solid rgb(97, 2, 2) ;" >
-  <form id="formID" style="border: 2px solid #000 " >
-
+</section>
+<section id="secEl" style="width: 200px;" >
+  <form id="formID" style="border: 2px solid #000 ; width: 200px;  " >
 <label for="fname" style="color: rgb(64, 136, 15); font-size: large; font-style: initials; "  >full name </label>
 <input type="text" id="fname" name="full name">
 <br><br>
@@ -147,8 +119,6 @@ hadi.render();
   <option value="Finance">Finance</option>
 </select>
 <br><br>
-
-
 <label for="level" style="color: rgb(64, 136, 15); font-size: large; font-style: initials; " > level:</label>
 <select name="level" id="level">
   <option value="juior" style="color: blue;" >juior</option>
@@ -161,22 +131,18 @@ hadi.render();
   
    <br> <br> <br>
 <input type="submit" value="Submit" style="color: crimson;">
-
-
   </form>
+  <section id="cardSection">
 
-</script>
-
+    <div class="cadDiv" id="cadDiv"></div>
+  </section>
 
     </main>
-</section>
-<section>
     <footer>
       mohammad alshraideh : all rights reserved &copy; 
-
-
     </footer>
-  </section>
+</section>
   <script src="./app.js"></script>
+  <a href="./card.css"></a>
 </body>
 </html>

@@ -1,0 +1,25 @@
+section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .cardDiv {
+    width: 240px;
+    height: 200px;
+    margin: 5px;
+    border: 1px solid #dddddd;
+    
+  }
+  .card-img-top {
+    min-height: 100px;
+  }
+  .card-title {
+    min-height: 100px;
+    
+  }
+  .card-text {
+    min-height: 100px;
+    overflow-wrap: wrap;
+    
+  }
